@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="The 100 fansite" />
+    <meta name="author" content="Night_K7" />
+    <title>The 100 | Lieux</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation spéciale pour les lieux-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-header">
+            <a href="../index.html">
+                <h5 class="offcanvas-title" id="offcanvasLeftLabel">THE 100</h5>
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="dropdown mt-3 d-grid gap-2">
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/saisons.html';">Saisons</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/lieux.html';">Lieux</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/clans.html';">Clans</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/personnages.html';">Personnages</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/sondages.html';">Sondages</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/episodes.html';">Episodes</button>
+                <button class="btn btn-primary" type="button"
+                    onclick="location.href = '../content/contact.html';">Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lieux-->
+    <section id="lieux">
+        <div class="col" id="col">
+            <!-- 1ER COLONNE DE LIEUX -->
+            <div class="side">
+                <h2>Lieux</h2>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/camp100.webp) no-repeat center/ 100%"
+                    onclick="myLocation('camp100')">
+                    Camp des délinquants</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/arkadia.webp) no-repeat top/ 100%"
+                    onclick="myLocation('arkadia')">
+                    Arkadia</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/mount_weather.webp) no-repeat center/ 100%"
+                    onclick="myLocation('weather')">
+                    Mont Weather</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/tondc.webp) no-repeat center/ 100%"
+                    onclick="myLocation('tondc')">
+                    Tondc</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/dead_zone.webp) no-repeat bottom/ 100%"
+                    onclick="myLocation('deadzone')">
+                    Zone morte</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/becca_island.webp) no-repeat center/ 100%"
+                    onclick="myLocation('becca')">
+                    L'île de Becca</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/polis.webp) no-repeat center/ 100%"
+                    onclick="myLocation('polis')">
+                    Polis</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/shallow_village.webp) no-repeat center/ 100%"
+                    onclick="myLocation('shallow')">
+                    Shallow Valley</div><br>
+            </div>
+            <!-- AFFICHAGE INFOS AU MILIEU -->
+            <div class="main">
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
+                    aria-controls="offcanvasLeft">Menu</button>
+                <h2>Description du lieu :</h2>
+                <!-- CAMP100 -->
+                <div id="camp100" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Le camp des délinquants (également appelé le Dropship ou le Camp) est une palissade
+                        construite autour du Dropship qui a amené les 100 sur Terre. C'est un emplacement majeur dans la
+                        première saison et un emplacement mineur dans les deuxième et troisième saisons. Le camp a été
+                        brûlé à la suite de l'attaque de Trikru contre lui. Le vaisseau et les murs restent en place,
+                        mais la plupart du reste du camp a brûlé ou a été récupéré et est actuellement inhabité.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/camp1.webp" alt="camp1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img01', 'modal01');"></td>
+                            <td><img src="../assets/img/lieux/camp2.webp" alt="camp2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img01', 'modal01');"></td>
+                            <td><img src="../assets/img/lieux/camp3.webp" alt="camp3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img01', 'modal01');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal01" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img01" style="width:100%">
+                    </div>
+                </div>
+                <!-- ARKADIA -->
+                <div id="arkadia" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Arkadia, anciennement connue sous le nom de Camp Jaha, était le port d'attache des Skykru.
+                        Le camp est construit autour de la station Alpha qui s'est écrasée après sa descente sur Terre
+                        avec les autres stations de l'Arche. Arkadia est considéré comme la maison de tout les Skykru,
+                        qu'ils soient venus sur Terre avec la station Alpha, Mecha, Factory, Farm, ou le dropship des
+                        délinquants. Arkadia a été détruite par Praimfaya.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/arkadia1.webp" alt="arkadia1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img02', 'modal02');"></td>
+                            <td><img src="../assets/img/lieux/arkadia2.webp" alt="arkadia2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img02', 'modal02');"></td>
+                            <td><img src="../assets/img/lieux/arkadia3.webp" alt="arkadia3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img02', 'modal02');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal02" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img02" style="width:100%">
+                    </div>
+                </div>
+                <!-- MOUNT WEATHER -->
+                <div id="weather" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Le centre des opérations d'urgence du mont Weather, également connu sous le nom de Mont
+                        Weather, est un endroit présenté dans la deuxième, troisième et sixième saison. Le Mont Weather
+                        est un bunker souterrain militaire américain et une installation de lancement de silo de
+                        missiles située dans les Blue Ridge Mountains, dans l'est des États-Unis d'Amérique sur Terre.
+                        Il a été construit pour loger de hauts responsables américains en cas de guerre nucléaire.
+                        Les hommes de la montagne sont les descendants des personnes d'origine qui s'y
+                        sont réfugiées pendant l'Apocalypse nucléaire. Au cours de la première saison, c'était le
+                        point de chute prévu pour les 100, mais ils n'ont pas pu s'y rendre car le territoire
+                        appartenait au Trikru. Le Mont Weather est actuellement inactif en raison d'une séquence
+                        d'autodestruction initiée par Carl Emerson et la nation des glaces. Il a été définitivement
+                        détruit.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/weather1.webp" alt="weather1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img03', 'modal03');"></td>
+                            <td><img src="../assets/img/lieux/weather2.webp" alt="weather2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img03', 'modal03');"></td>
+                            <td><img src="../assets/img/lieux/weather3.webp" alt="weather3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img03', 'modal03');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal03" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img03" style="width:100%">
+                    </div>
+                </div>
+                <!-- TONDC -->
+                <div id="tondc" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Tondc ou Tondisi (Trigedasleng), anciennement Washington D.C., est un endroit sur Terre
+                        présenté dans la deuxième saison. Tondc tire son nom de "Washington DC" et est un lieu politique
+                        clé par les Trikru. Suite au missile lancé par Mount Weather, Tondc est resté en ruines. Le
+                        village s'est rétabli et Clarke à estimé sa population à 300 dans "Heavy Lies the Crown". À
+                        partir de "Praimfaya", il est supposé que Tondc est complètement parti ou en ruine car la Terre
+                        s'avère inhabitable. Cependant, la Terre est redevenue habitable par la suite...
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/tondc1.webp" alt="tondc1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img04', 'modal04');"></td>
+                            <td><img src="../assets/img/lieux/tondc2.webp" alt="tondc2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img04', 'modal04');"></td>
+                            <td><img src="../assets/img/lieux/tondc3.webp" alt="tondc3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img04', 'modal04');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal04" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img04" style="width:100%">
+                    </div>
+                </div>
+                <!-- DEAD ZONE -->
+                <div id="deadzone" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        La zone morte est un endroit présenté dans The 100. On ne sait pas quel endroit il était
+                        avant l'apocalypse nucléaire, seulement qu'il n'est pas loin de ce qui était autrefois connu
+                        sous le nom de Washington DC. Il est probable que ce soit dans ce qui était New York, car la
+                        Statue de la Liberté est vue à moitié enterrée dans le sable pendant les premiers titres et le
+                        Manhattan Bridge peut être vu à l'arrière-plan derrière le missile de Jaha après son
+                        atterrissage sur Terre. C'est aussi l'endroit ou l'on recontre pour la prmière fois Emori.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/deadzone1.webp" alt="deadzone1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img05', 'modal05');"></td>
+                            <td><img src="../assets/img/lieux/deadzone2.webp" alt="deadzone2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img05', 'modal05');"></td>
+                            <td><img src="../assets/img/lieux/deadzone3.webp" alt="deadzone3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img05', 'modal05');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal05" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img05" style="width:100%">
+                    </div>
+                </div>
+                <!-- BECCA -->
+                <div id="becca" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        L'île de Becca, également connue sous le nom d'île A.L.I.E., est située au large de la côte
+                        nord-est de ce qui était les États-Unis. C'est à l'est du New Jersey et au sud de Long Island
+                        (New York). Il est également à 210 km de Polis. Avant l'apocalypse nucléaire, cette île était
+                        utilisée par Becca et son équipe pour le projet A.L.I.E. Ensuite, il a été utilisé par A.L.I.E
+                        et ses partisans. Après qu'A.L.I.E. à été détruite, une équipe des Skykru dirigée par Abigail
+                        Griffin utilise l'île pour des recherches sur les Nightblood. Sur l'île, se trouve également un
+                        phare et un manoir.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/becca1.webp" alt="becca1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img06', 'modal06');"></td>
+                            <td><img src="../assets/img/lieux/becca2.webp" alt="becca2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img06', 'modal06');"></td>
+                            <td><img src="../assets/img/lieux/becca3.webp" alt="becca3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img06', 'modal06');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal06" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img06" style="width:100%">
+                    </div>
+                </div>
+                <!-- POLIS -->
+                <div id="polis" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Polis, anciennement Baltimore, était la capitale de la Coalition et l'endroit où résidait le
+                        commandant. <br>
+                        En février 2150, Polis, avec Arkadia et la plateforme Floukru, était sous l'occupation
+                        d'A.L.I.E. et ses partisans. Le trône du commandant (au plus haut niveau de la tour
+                        principale de Polis étant le siège du pouvoir et la base des opérations de l'A.L.I.E.
+                        pendant le court conflit. <br>
+                        Cependant, A.L.I.E. a été vaincu dans le final de la saison 3. <br>
+                        À partir de la saison quatre, Polis est devenue une zone de guerre. À la fin de la saison
+                        quatre, Polis a été détruit par le deuxième Praimfaya. <br>
+                        Plus de cent ans après l'événement de "Damoclès", le groupe de Clarke retourne sur une Terre
+                        régénérée, où il n'y a presque aucun signe des ruines de Polis, la zone ayant été reprise
+                        par une forêt à la place. Les seuls vestiges semblent être quelques roches tombées au-dessus de
+                        l'entrée du bunker et de la base envahie de la tour Polis.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/polis1.webp" alt="polis1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img07', 'modal07');"></td>
+                            <td><img src="../assets/img/lieux/polis2.webp" alt="polis2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img07', 'modal07');"></td>
+                            <td><img src="../assets/img/lieux/polis3.webp" alt="polis3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img07', 'modal07');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal07" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img07" style="width:100%">
+                    </div>
+                </div>
+                <!-- SHALLOW VALLEY -->
+                <div id="shallow" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Shallow Valley (aussi connu sous le nom d'Eden ou the Valley) est située dans ce qui était
+                        autrefois le nord-ouest de la Virginie sur Terre.
+                        Avant la deuxième apocalypse nucléaire, il était habité par le clan de la Shallow Valley
+                        (Louwoda Kliron). <br>
+                        La vallée était un emplacement majeur dans la saison cinq; servant de la seule "tache verte"
+                        sur la planète. Cela était dû en partie à la "Praimfaya" qui est passé au-dessus de la vallée.
+                        <br>
+                        C'est aussi le village d'origine de Madi.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/shallow1.webp" alt="shallow1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img08', 'modal08');"></td>
+                            <td><img src="../assets/img/lieux/shallow2.webp" alt="shallow2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img08', 'modal08');"></td>
+                            <td><img src="../assets/img/lieux/shallow3.webp" alt="shallow3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img08', 'modal08');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal08" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img08" style="width:100%">
+                    </div>
+                </div>
+                <!-- POLARIS -->
+                <div id="polaris" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Polaris, également connue sous le nom de 13e Station (anciennement connue sous le nom de
+                        Station Polaris), était une station spatiale appartenant à la société de Becca. Il a été utilisé
+                        par Becca pour mener des recherches sur A.L.I.E. 2.0 pendant deux ans après l'apocalypse
+                        nucléaire. Il a été détruit par Alpha Station le jour de l'Unité afin que les autres stations se
+                        mettent en ligne et rejoignent l'Arche.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/polaris1.webp" alt="polaris1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img09', 'modal09');"></td>
+                            <td><img src="../assets/img/lieux/polaris2.webp" alt="polaris2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img09', 'modal09');"></td>
+                            <td><img src="../assets/img/lieux/polaris3.webp" alt="polaris3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img09', 'modal09');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal09" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img09" style="width:100%">
+                    </div>
+                </div>
+                <!-- ARK -->
+                <div id="ark" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        L'Arche était une station spatiale en orbite qui servait de domicile aux Skykru. Les Skykru
+                        sont les descendants de ceux qui ont échappé à l'Apocalypse nucléaire sur Terre 97 ans avant les
+                        événements de la série. Avec le Camp des délinquants, The Ark a servi de lieu principal lors des
+                        événements de la première saison de la series. <br>
+                        Suite aux événements du final de la saison 1, l'Arche a été divisée en ses
+                        stations originelle; ne laissant que la partie gouvernement et science (Go-Sci) en orbite.
+                        <br>
+                        À la fin de la deuxième saison, une composante nucléaire de la station spatiale de haute
+                        technologie est en possession de l'Intelligence Artificielle A.L.I.E. <br>
+                        Alors que l'anneau Go-Sci restait en orbite, il est utilisé par A.L.I.E. dans la saison
+                        trois et le Spacekru dans la saison quatre. Spacekru, composé de cinq Skykru et de deux
+                        Grounders, a vécu à bord de l'Anneau pendant les 6 années qu'il a fallu pour que les niveaux de
+                        rayonnement chutent après la deuxième apocalypse nucléaire. Ils sont restés à bord jusqu'à
+                        l'épisode de la saison cinq, «Sleeping Giants», lorsqu'ils ont abandonné l'anneau. <br>
+                        La station entière était gouvernée par un chancelier et son conseil. Le chancelier était élu
+                        par le peuple et le conseil. Sous le Conseil et le Chancelier se trouvaient les gardes de
+                        l'Arche qui étaient la principale force de sécurité et d'application de la loi sur les 12
+                        stations.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/ark1.webp" alt="ark1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img10', 'modal10');"></td>
+                            <td><img src="../assets/img/lieux/ark2.webp" alt="ark2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img10', 'modal10');"></td>
+                            <td><img src="../assets/img/lieux/ark3.webp" alt="ark3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img10', 'modal10');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal10" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img10" style="width:100%">
+                    </div>
+                </div>
+                <!-- ELIGIUS -->
+                <div id="eligius" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Eligius IV est un vaisseau minier et une station spatiale précédemment construits et
+                        possédés par Eligius Corporation avant la première apocalypse nucléaire. Il a été conçu pour
+                        être utilisé pour des missions interstellaires pour extraire des astéroïdes et a ensuite été
+                        utilisé pour rechercher des planètes habitables. Le vaisseau a été construit pour accueillir 500
+                        personnes dans un cryo-sommeil indéfinie. <br>
+                        En plus de l'équipement minier, de la nourriture pour plusieurs semaines, un
+                        petit recycleur d'eau, un navire de transport et un assortiment d'armes et de matériel de
+                        qualité militaire pour les gardes. Y compris les armes à feu, les missiles et les colliers
+                        anti-chocs pour les détenus. Il dispose également d'une baie médicale entièrement équipée et
+                        d'un grand approvisionnement en carburant à long terme. <br>
+                        C'était un refuge pour les seuls survivants de la race humaine, qui prévoyaient à l'origine
+                        de rester sur le navire en stase pendant une décennie jusqu'à ce que la Terre soit habitable
+                        après l'événement de Damoclès. <br>
+                        Cependant, alors que l'on croyait que la Terre était toujours inhabitable,
+                        Monty a mis le navire sur la voie d'un nouveau monde natal potentiel pour l'humanité dans un
+                        autre système solaire avant de mourir de vieillesse après sa femme, après avoir découvert après
+                        30 ans de travail qu'Eligius III avait été une mission de colonie pour installer cinq autres
+                        mondes potentiellement habitables.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/eligius1.webp" alt="eligius1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img11', 'modal11');"></td>
+                            <td><img src="../assets/img/lieux/eligius2.webp" alt="eligius2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img11', 'modal11');"></td>
+                            <td><img src="../assets/img/lieux/eligius3.webp" alt="eligius3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img11', 'modal11');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal11" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img11" style="width:100%">
+                    </div>
+                </div>
+                <!-- SANCTUM -->
+                <div id="sanctum" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Sanctum (appelée "Planète Alpha" par l'équipe Eligius III) est une lune partageant des
+                        similitudes atmosphériques avec la Terre. Il est situé dans la zone Boucle d'or d'un système
+                        d'étoiles binaires, ce qui signifie qu'il est dans la zone habitable et a deux soleils. C'est le
+                        monde le plus proche de la Terre et probablement le plus semblable. Il a été colonisé par une
+                        équipe de la Terre, et composé de quatre familles, les Primes et un autre individu. En utilisant
+                        des Mind Drives, ils ont continué leur règne ici pendant plus de deux siècles. Comme les autres
+                        planètes de mission, il se trouve à proximité d'un trou noir.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/sanctum1.webp" alt="sanctum1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img12', 'modal12');"></td>
+                            <td><img src="../assets/img/lieux/sanctum2.webp" alt="sanctum2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img12', 'modal12');"></td>
+                            <td><img src="../assets/img/lieux/sanctum3.webp" alt="sanctum3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img12', 'modal12');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal12" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img12" style="width:100%">
+                    </div>
+                </div>
+                <!-- NAKARA -->
+                <div id="nakara" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Nakara est une planète gelée avec une atmosphère respirable. C'était l'un des six mondes
+                        connectés par la pierre d'anomalie. La présence de l'Anomalie à également été détectée sur
+                        la planète et elle est utilisée par les Disciples comme cimetière pour leurs morts. <br>
+                        L'usage principal de la planète est un Ossuarium, ou l'enterrement des morts pour les
+                        disciples. Les ouvertures de surface indiquent la présence d'entités organiques.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/nakara1.webp" alt="nakara1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img13', 'modal13');"></td>
+                            <td><img src="../assets/img/lieux/nakara2.webp" alt="nakara2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img13', 'modal13');"></td>
+                            <td><img src="../assets/img/lieux/nakara3.webp" alt="nakara3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img13', 'modal13');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal13" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img13" style="width:100%">
+                    </div>
+                </div>
+                <!-- ETHEREA -->
+                <div id="etherea" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Etherea est une planète habitable qui est l'un des six mondes reliés par la pierre
+                        d'anomalie. La présence d'Anomalie a été détectée sur la planète. Il a également une
+                        atmosphère similaire à la Terre. <br>
+                        Le temps sur Etherea peut devenir extrême avec des tempêtes de neige qui peuvent durer des
+                        mois. Bill Cadogan a été piégé par une telle tempête pendant trois mois, tandis que Bellamy
+                        Blake et le Disciples Doucette ont été piégés pendant au moins deux mois par une autre. Comme
+                        sur Terre, les jours commencent finalement à raccourcir, bien que l'on sache que les violentes
+                        tempêtes se produisent avant cette période qui, sur Terre, se situe au début de l'hiver.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/etherea1.webp" alt="etherea1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img14', 'modal14');"></td>
+                            <td><img src="../assets/img/lieux/etherea2.webp" alt="etherea2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img14', 'modal14');"></td>
+                            <td><img src="../assets/img/lieux/etherea3.webp" alt="etherea3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img14', 'modal14');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal14" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img14" style="width:100%">
+                    </div>
+                </div>
+                <!-- SKYRING -->
+                <div id="skyring" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Surnommée Skyring par Hope Diyoza, c'est une planète habitable avec un anneau visible
+                        dans son ciel. C'était l'une des destinations de la mission Eligius III. Elle a une
+                        atmosphère similaire à la Terre, et la présence d'anomalie sur cette planète est détectée sous
+                        l'eau et est trop profonde pour nager sans équipement de protection. <br>
+                        La dilatation du temps sur Skyring est élevée. Les secondes sur Sanctum équivalent à des
+                        mois sur Skyring tandis qu'un jour peut égaler des siècles. Cela est dû au fait que les planètes
+                        sont plus éloignées d'un trou noir par rapport aux autres planètes de la mission. <br>
+                        La planète est également connue sous le nom de Beta par Mission Team Beta et Penance par les
+                        Disciples. Skyring est principalement utilisé comme planète prison par les Disciples pour
+                        envoyer leurs membres enfreignant la loi en guise de punition.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/skyring1.webp" alt="skyring1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img15', 'modal15');"></td>
+                            <td><img src="../assets/img/lieux/skyring2.webp" alt="skyring2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img15', 'modal15');"></td>
+                            <td><img src="../assets/img/lieux/skyring3.webp" alt="skyring3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img15', 'modal15');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal15" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img15" style="width:100%">
+                    </div>
+                </div>
+                <!-- BARDO -->
+                <div id="bardo" style="display: none;">
+                    <h4>Tout au long de la série</h4>
+                    <br>
+                    <p>
+                        Bardo est une planète extraterrestre devenue inhabitable, la laissant sans atmosphère
+                        respirable. C'est la que résident des Disciples. Elle abritait autrefois une race
+                        extraterrestre appelée les «Bardoans» qui contrôlaient l'anomalie temporelle. <br>
+                        Les Bardoans étaient des géants extraterrestres qui ont accidentellement détruit leur
+                        planète. Ils ont construit des structures souterraines pour survivre avant de s'éteindre. Selon
+                        Anders, ils ont été anéantis par le Gen-9 et transformés en géants de cristal. Ils ont laissé
+                        derrière eux des journaux faisant référence à leur utilisation de la pierre d'anomalie et à ce
+                        que Becca Franko appellerait «le code final» menant au jour du jugement et à la fin de leur
+                        espèce. En réalité, il s'agissait d'un test du juge pour déterminer si une race se
+                        transcenderait ou serait anéantie. Lorsque les Bardoans ont échoué au test, le juge a envoyé
+                        Gen-9 pour les éliminer.
+                        <br>
+                        À un moment donné après l'extinction des Bardoans, les humains de la Terre sont arrivés à
+                        travers l'anomalie temporelle fuyant l'apocalypse nucléaire. Ils se sont installés à Bardo et
+                        sont devenus les Disciples. Ils ont trouvé et adopté une grande partie de la technologie des
+                        Bardoans et, au cours des siècles, ont traduit les journaux qu'ils ont laissés derrière eux.
+                        Chaque personne avait un code biométrique unique par lequel une pierre d'anomalie peut trouver
+                        quelqu'un dans l'univers. Le code avait l'habitude de tenir sur le bras d'un Bardoan, mais pour
+                        les humains, le seul endroit assez grand est leur dos.
+                    </p>
+                    <br>
+                    <h4>Quelques photos</h4>
+                    <table>
+                        <tr>
+                            <td><img src="../assets/img/lieux/bardo1.webp" alt="bardo1" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img16', 'modal16');"></td>
+                            <td><img src="../assets/img/lieux/bardo2.webp" alt="bardo2" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img16', 'modal16');"></td>
+                            <td><img src="../assets/img/lieux/bardo3.webp" alt="bardo3" style="width: 100%;"
+                                    onclick="imageZoom(this, 'img16', 'modal16');"></td>
+                        </tr>
+                    </table>
+                    <h4>Clique sur la photo pour l'agrandir</h4>
+                    <div id="modal16" onclick="this.style.display='none'">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="img16" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <!-- 2EME COLONNE DE LIEUX -->
+            <div class="side">
+                <h2>The 100</h2>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/polaris.webp) no-repeat center/ 100%"
+                    onclick="myLocation('polaris')">
+                    Polaris</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/ark.webp) no-repeat center/ 100%"
+                    onclick="myLocation('ark')">
+                    L'arche</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/eligius4.webp) no-repeat center/ 100%"
+                    onclick="myLocation('eligius')">
+                    Eligius IV</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/sanctum.webp) no-repeat center/ 100%"
+                    onclick="myLocation('sanctum')">
+                    Sanctum</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/nakara.webp) no-repeat center/ 100%"
+                    onclick="myLocation('nakara')">
+                    Nakara</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/etherea.webp) no-repeat center/ 100%"
+                    onclick="myLocation('etherea')">
+                    Etherea</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/skyring.webp) no-repeat center/ 100%"
+                    onclick="myLocation('skyring')">
+                    Skyring</div><br>
+                <div class="fakeimg"
+                    style="height:90px; background: url(../assets/img/lieux/bardo.webp) no-repeat center/ 100%"
+                    onclick="myLocation('bardo')">
+                    Bardo</div><br>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to top -->
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer-->
+    <div id="footer"></div>
+
+    <!-- Appel Navbar / Footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("../content/navbar.html");
+            $("#footer").load("../content/footer.html");
+        });
+    </script>
+    <!--Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!--JS-->
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!--Fontawesome logo-->
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+</body>
+
+</html>
