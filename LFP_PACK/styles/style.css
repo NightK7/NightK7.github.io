@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Ligue1Font';
+    src: url('../fonts/L1.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #262624;
+    background-size: 200px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Bouton en haut mois/année */
+.toggle-container {
+    font-family: 'Ligue1Font';
+    display: flex;
+    background: #FFA500;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 20px;
+    box-shadow: 10px;
+}
+
+.toggle-option {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.selected {
+    background: #262624;
+    color: white;
+}
+
+/* pour les logos competitions */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.logo-row img {
+    width: 40px;
+    height: 45px;
+}
+
+/* carte d'abonnements */
+.card {
+    background-color: rgb(8, 95, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0.5px 0.5px white;
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+/* pour les titres */
+h1 {
+    font-family: 'Ligue1Font';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.two {
+    background: #ff7fde;
+    color: black;
+}
+
+.three {
+    background: #FFA500;
+    color: black;
+}
+
+body>div:nth-child(3)>div:nth-child(2) {
+    background: #FFEB3B;
+    color: black;
+}
+
+.price {
+    font-family: 'Ligue1Font';
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.separator {
+    height: 1px;
+    background: #ccc;
+    margin-bottom: 10px;
+}
+
+#blackseparator {
+    background: black;
+}
+
+/* bouton s'abonner*/
+.subscribe {
+    background: #50fa7b;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Ligue1Font';
+    font-size: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.69);
+    cursor: pointer;
+    color: black;
+}
+
+/*Bandeau des clubs*/
+.bandeau {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.bandeau .logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.bandeau .logos img {
+    height: 50px;
+    width: auto;
+    max-width: 100px;
+}
+
+/* Prix Pass */
+.pricing-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.price-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.price-option p {
+    font-size: 16px;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.buy {
+    background-color: #50FA7B;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Ligue1Font';
+    border-radius: 5px;
+    box-shadow: 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.69);
+    font-size: 14px;
+    color: black;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFP Pack</title>
+    <link rel="icon" href="images/lfp.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Affichage prix -->
+    <script>
+        function togglePrices(option) {
+            document.getElementById('monthly-option').classList.remove('selected');
+            document.getElementById('season-option').classList.remove('selected');
+            document.getElementById(option + '-option').classList.add('selected');
+
+            const prices = [
+                { id: 'price1', annual: 199.99, monthly: 19.99 },
+                { id: 'price2', annual: 149.99, monthly: 14.99 },
+                { id: 'price3', annual: 299.99, monthly: 29.99 },
+                { id: 'price4', annual: 99.99, monthly: 9.99 }
+            ];
+
+            prices.forEach(p => {
+                document.getElementById(p.id).innerText = option === 'season'
+                    ? `${p.annual} € / Saison`
+                    : `${p.monthly} € / Mois`;
+            });
+        }
+        window.onload = function () {
+            togglePrices('monthly');
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Prix Mois/Année -->
+    <div class="toggle-container">
+        <div id="monthly-option" class="toggle-option selected" onclick="togglePrices('monthly')">Mensuel</div>
+        <div id="season-option" class="toggle-option" onclick="togglePrices('season')">Saison</div>
+    </div>
+    <!-- LES 4 PACK -->
+    <div class="container">
+        <!-- Pack Classique -->
+        <div class="card">
+            <h1>Pack Classique</h1>
+            <div class="separator"></div>
+            <div class="logo-container">
+                <div class="logo-row">
+                    <img src="images/l1.png" alt="L1">
+                    <img src="images/l2.png" alt="L2">
+                    <img src="images/n1.png" alt="L3">
+                </div>
+                <div class="logo-row">
+                    <img src="images/plf.png" alt="PLF">
+                    <img src="images/cdf.png" alt="CDF">
+                    <img src="images/tdc.png" alt="TDC">
+                </div>
+            </div>
+            <p class="price" id="price1">€19.99 / Mensuel</p>
+            <div class="separator"></div>
+            <p>100 % des matchs des 6 compétitions</p>
+            <p>2 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Avec publicités</p>
+            <div class="subscribe">S'abonner</div>
+        </div>
+        <!-- Pack Etudiant -->
+        <div class="card two">
+            <h1>Pack Etudiant</h1>
+            <div class="separator" id="blackseparator"></div>
+            <div class="logo-container">
+                <div class="logo-row">
+                    <img src="images/l1.png" alt="L1">
+                    <img src="images/l2.png" alt="L2">
+                    <img src="images/n1.png" alt="L3">
+                </div>
+                <div class="logo-row">
+                    <img src="images/plf.png" alt="PLF">
+                    <img src="images/cdf.png" alt="CDF">
+                    <img src="images/tdc.png" alt="TDC">
+                </div>
+            </div>
+            <p class="price" id="price2">€14.99 / Mensuel</p>
+            <div class="separator" id="blackseparator"></div>
+            <p>100 % des matchs des 6 compétitions</p>
+            <p>2 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Avec publicités</p>
+            <div class="subscribe">S'abonner</div>
+        </div>
+        <!-- Pack Premium -->
+        <div class="card">
+            <h1>Pack Premium</h1>
+            <div class="separator"></div>
+            <div class="logo-container">
+                <div class="logo-row">
+                    <img src="images/l1.png" alt="L1">
+                    <img src="images/l2.png" alt="L2">
+                    <img src="images/n1.png" alt="L3">
+                </div>
+                <div class="logo-row">
+                    <img src="images/plf.png" alt="PLF">
+                    <img src="images/cdf.png" alt="CDF">
+                    <img src="images/tdc.png" alt="TDC">
+                </div>
+            </div>
+            <p class="price" id="price3">€29.99 / Mensuel</p>
+            <div class="separator"></div>
+            <p>100 % des matchs des 6 compétitions</p>
+            <p>4 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Sans publicités (images du stade à la place)</p>
+            <div class="subscribe">S'abonner</div>
+        </div>
+        <!-- Pack Club -->
+        <div class="card two">
+            <h1>Pack Club*</h1>
+            <div class="separator" id="blackseparator"></div>
+            <div class="logo-container">
+                <div class="logo-row">
+                    <img src="images/l1.png" alt="L1">
+                    <img src="images/l2.png" alt="L2">
+                    <img src="images/n1.png" alt="L3">
+                </div>
+                <div class="logo-row">
+                    <img src="images/plf.png" alt="PLF">
+                    <img src="images/cdf.png" alt="CDF">
+                    <img src="images/tdc.png" alt="TDC">
+                </div>
+            </div>
+            <p class="price" id="price4">€9.99 / Mensuel</p>
+            <div class="separator" id="blackseparator"></div>
+            <p>Un club de L1 + 100 % des autres matchs</p>
+            <p>2 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Avec publicités / * Offre cumulable</p>
+            <div class="subscribe">S'abonner</div>
+        </div>
+    </div>
+    <!-- LES PASS OPTION -->
+    <div class="container">
+        <!-- Pass Journée -->
+        <div class="card three">
+            <h1>Pass Journée*</h1>
+            <div class="separator" id="blackseparator"></div>
+            <p>(dans la limite de 10 journées/an maximum)</p>
+            <div class="pricing-options">
+                <div class="price-option">
+                    <p>1 journée : 8€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>3 journées : 12€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>5 journées : 15€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+            </div>
+            <div class="separator" id="blackseparator"></div>
+            <p>100 % des matchs sur 1 journée</p>
+            <p>2 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Avec publicités</p>
+            <div class="separator" id="blackseparator"></div>
+            <p>* Offre cumulable</p>
+        </div>
+        <!-- Pass Mi-Saison -->
+        <div class="card three">
+            <h1>Pass Mi-Saison</h1>
+            <div class="separator" id="blackseparator"></div>
+            <p>(disponible en Août et Janvier)</p>
+            <div class="logo-container">
+                <div class="logo-row">
+                    <img src="images/l1.png" alt="L1">
+                    <img src="images/l2.png" alt="L2">
+                    <img src="images/n1.png" alt="L3">
+                </div>
+                <div class="logo-row">
+                    <img src="images/plf.png" alt="PLF">
+                    <img src="images/cdf.png" alt="CDF">
+                    <img src="images/tdc.png" alt="TDC">
+                </div>
+            </div>
+            <p class="price" id="price2">120 €</p>
+            <div class="separator" id="blackseparator"></div>
+            <p>100 % des matchs des 6 compétitions</p>
+            <p>2 appareils</p>
+            <p>Statistiques en direct / Mode Mosaïque</p>
+            <p>Choix des commentaires / Ambiance stade</p>
+            <p>Avec publicités</p>
+            <div class="subscribe">S'abonner</div>
+        </div>
+        <!-- Pass Match -->
+        <div class="card three">
+            <h1>Pass Match L1*</h1>
+            <div class="separator" id="blackseparator"></div>
+            <p>(Prix abonnés)</p>
+            <div class="pricing-options">
+                <div class="price-option">
+                    <p>1 match : 3€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>3 matchs : 7€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>5 matchs : 10€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+            </div>
+            <div class="separator" id="blackseparator"></div>
+            <p>(Prix non abonnés)</p>
+            <div class="pricing-options">
+                <div class="price-option">
+                    <p>1 match : 5€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>3 matchs : 12€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+                <div class="price-option">
+                    <p>5 matchs : 18€</p>
+                    <div class="buy">Acheter</div>
+                </div>
+            </div>
+            <div class="separator" id="blackseparator"></div>
+            <p>Accès à un match de L1 au choix</p>
+            <p>* Offre cumulable</p>
+        </div>
+    </div>
+    <!-- Les clubs de L1 -->
+    <div class="bandeau">
+        <div class="logos">
+            <img src="images/logos/angers.png" alt="Logo sco">
+            <img src="images/logos/auxerre.png" alt="Logo aja">
+            <img src="images/logos/brest.png" alt="Logo sb29">
+            <img src="images/logos/havre.png" alt="Logo hac">
+            <img src="images/logos/lens.png" alt="Logo rcl">
+            <img src="images/logos/lille.png" alt="Logo losc">
+            <img src="images/logos/lyon.png" alt="Logo ol">
+            <img src="images/logos/marseille.png" alt="Logo om">
+            <img src="images/logos/monaco.png" alt="Logo asm">
+            <img src="images/logos/montpellier.png" alt="mhsc">
+            <img src="images/logos/nantes.png" alt="Logo fcn">
+            <img src="images/logos/nice.png" alt="Logo ogcn">
+            <img src="images/logos/paris.png" alt="Logo psg">
+            <img src="images/logos/reims.png" alt="Logo sr">
+            <img src="images/logos/rennes.png" alt="Logo srfc">
+            <img src="images/logos/st-etienne.png" alt="Logo ste">
+            <img src="images/logos/strasbourg.png" alt="Logo rcsa">
+            <img src="images/logos/toulouse.png" alt="Logo tfc">
+        </div>
+    </div>
+</body>
+
+</html>
