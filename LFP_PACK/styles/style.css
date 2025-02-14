@@ -114,7 +114,7 @@ p {
 }
 
 body>div:nth-child(3)>div:nth-child(2) {
-    background: #FFEB3B;
+    background: #50FA7B;
     color: black;
 }
 
@@ -137,16 +137,16 @@ body>div:nth-child(3)>div:nth-child(2) {
 
 /* bouton s'abonner*/
 .subscribe {
-    background: #50fa7b;
+    background: black;
     padding: 10px;
     text-align: center;
     font-weight: bold;
     font-family: 'Ligue1Font';
     font-size: 25px;
     border-radius: 5px;
-    box-shadow: 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.69);
+    box-shadow: 0px 0px 0.5px 0.5px rgba(255, 255, 255, 0.69);
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 /*Bandeau des clubs*/
@@ -192,16 +192,22 @@ body>div:nth-child(3)>div:nth-child(2) {
 }
 
 .price-option p {
-    font-size: 16px;
     margin: 0;
     flex: 1;
     text-align: left;
+    font-family: 'Ligue1Font';
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    letter-spacing: 2px;
 }
 
 .buy {
-    background-color: #50FA7B;
+    background-color: white;
+    letter-spacing: 2px;
     color: white;
     padding: 5px 10px;
+    width: 70px;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
