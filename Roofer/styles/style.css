@@ -2,7 +2,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(#051f30, #000000);
+  background: linear-gradient(to right, #2A3D66, #121212);
 }
 
 .menu::-webkit-scrollbar {
@@ -45,7 +45,7 @@ ul {
 }
 
 .menu-content li:hover {
-  background: #0c0c0c;
+  background: #f05f06;
 }
 
 .menu-content li span:nth-child(2) {
@@ -65,5 +65,22 @@ a {
   font-size: 25px;
   margin-right: 10px;
   border-radius: 50%;
-  background: #0c0c0c;
+  background: #f05f06;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.content {
+  display: none;
+  /* Caché par défaut */
+  margin-left: 100px;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.content.active {
+  display: block;
+  /* Afficher uniquement l'élément actif */
 }
