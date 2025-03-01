@@ -23,3 +23,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Tableau des horaires
+function verifierHoraire() {
+    const maintenant = new Date();
+    const heure = maintenant.getHours();
+    const jour = maintenant.getDay(); // 0 = Dimanche, 1 = Lundi, etc.
+    let estOuvert = false;
+
+    if (jour >= 1 && jour <= 5) { // Lundi à Vendredi
+        if (heure >= 8 && heure < 18) estOuvert = true;
+    }
+    if (jour === 5 && heure >= 8 && heure < 17) estOuvert = true; // Vendredi
+
+    document.getElementById("etat-horaire").innerHTML = estOuvert
+        ? "🟢 <strong>Venez, nous sommes ouverts !</strong>"
+        : "🔴 <strong>Nous sommes actuellement fermés.</strong>";
+}
+
+verifierHoraire(); // Exécuter au chargement de la page
