@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function (event) {
             event.preventDefault(); // Empêche le comportement par défaut
 
-            // Récupère le texte du bouton pour cibler la section correspondante
-            let sectionId = this.querySelector("span:last-child").textContent.trim();
+            // Récupère la valeur de l'attribut data-target pour cibler la section correspondante
+            let sectionId = this.getAttribute("data-target");
 
             // Masque toutes les sections
             document.querySelectorAll(".content").forEach(section => {

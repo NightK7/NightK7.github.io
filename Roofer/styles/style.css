@@ -9,6 +9,11 @@ body {
   display: none;
 }
 
+h1,
+h2 {
+  color: #f05f06;
+}
+
 ul {
   padding: 0;
 }
@@ -77,10 +82,77 @@ a {
   padding: 20px;
   border-radius: 10px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .content.active {
   display: block;
   /* Afficher uniquement l'élément actif */
+}
+
+#Acceuil {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.5)),
+    url('../images/home.webp');
+  /* background-image: url('../images/home.webp'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 33%;
+}
+
+.flex-item-center {
+  padding: 10px;
+  flex: 33%;
+  font-size: 25px;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 33%;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Style pour les icônes de réseaux sociaux */
+.social-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f05f06;
+}
+
+.social-icon i {
+  font-size: 35px;
 }
