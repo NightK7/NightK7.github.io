@@ -1,3 +1,4 @@
+// POUR L'AFFICHAGE DU CONTENU AN FONSTION DU MENU SUR LE COTER
 document.addEventListener("DOMContentLoaded", function () {
     // Sélectionne tous les liens du menu
     let menuItems = document.querySelectorAll(".menu-content li a");
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Tableau des horaires
+// TABLEAU DS HORAIRES D'OUVERTURE
 function verifierHoraire() {
     const maintenant = new Date();
     const heure = maintenant.getHours();
@@ -42,3 +43,30 @@ function verifierHoraire() {
 }
 
 verifierHoraire(); // Exécuter au chargement de la page
+
+// POUR LE FORMULAIRE DE CONTACT
+function sendMail() {
+    e.preventDefault();
+
+    var prenom = document.getElementById("prenom").value;
+    var nom = document.getElementById("nom").value;
+    var mail = document.getElementById("mail").value;
+    var phone = document.getElementById("phone").value;
+    var adresse = document.getElementById("adresse").value;
+    var why = document.getElementById("why").value;
+    var subject = document.getElementById("subject").value;
+
+    var ebody = "Prénom: " + prenom + "\r\n"
+        + "Nom: " + nom + "\r\n"
+        + "Email: " + mail + "\r\n"
+        + "Téléphone: " + phone + "\r\n"
+        + "Adresse: " + adresse + "\r\n"
+        + "Message: " + subject;
+
+    document.getElementById('formContact').action = "mailto:lefebvre.laveau.sylvain@gmail.com?subject="
+        + encodeURIComponent(why)
+        + "&body=" + encodeURIComponent(ebody);
+
+    alert("Lien mailto généré : " + mailtoLink);
+    // window.location.href = mailtoLink;
+}

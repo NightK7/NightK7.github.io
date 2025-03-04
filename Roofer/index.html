@@ -20,14 +20,18 @@
                   <li><a href="#" data-target="Acceuil"><span
                                     class="material-symbols-outlined">home</span><span>Acceuil</span></a></li>
 
+                  <li><a href="#" data-target="Realisation"><span
+                                    class="material-symbols-outlined">done</span><span>Réalisation</span></a></li>
+
                   <li><a href="#" data-target="Couverture"><span
                                     class="material-symbols-outlined">roofing</span><span>Couverture</span></a></li>
 
                   <li><a href="#" data-target="Zinguerie"><span
-                                    class="material-symbols-outlined">build</span><span>Zinguerie</span></a></li>
+                                    class="material-symbols-outlined">construction</span><span>Zinguerie</span></a></li>
 
                   <li><a href="#" data-target="Entretien"><span
-                                    class="material-symbols-outlined">settings</span><span>Entretien</span></a></li>
+                                    class="material-symbols-outlined">cleaning_services</span><span>Entretien</span></a>
+                  </li>
 
                   <li><a href="#" data-target="Fenetre"><span
                                     class="material-symbols-outlined">window</span><span>Fenêtre de toit</span></a></li>
@@ -35,11 +39,8 @@
                   <li><a href="#" data-target="Isolation"><span
                                     class="material-symbols-outlined">thermostat</span><span>Isolation</span></a></li>
 
-                  <li><a href="#" data-target="PVC"><span
-                                    class="material-symbols-outlined">plumbing</span><span>PVC</span></a></li>
-
-                  <li><a href="#" data-target="Realisation"><span
-                                    class="material-symbols-outlined">done</span><span>Réalisation</span></a></li>
+                  <li><a href="#" data-target="PVC"><span class="material-symbols-outlined">valve
+                              </span><span>PVC</span></a></li>
 
                   <li><a href="#" data-target="Horaires"><span
                                     class="material-symbols-outlined">schedule</span><span>Horaires</span></a></li>
@@ -99,6 +100,10 @@
 
       </div>
 
+      <div id="Realisation" class="content">Nos réalisations.
+
+      </div>
+
       <div id="Couverture" class="content">Infos sur la couverture.
 
       </div>
@@ -115,9 +120,6 @@
 
       </div>
       <div id="PVC" class="content">Infos sur le PVC.
-
-      </div>
-      <div id="Realisation" class="content">Nos réalisations.
 
       </div>
 
@@ -160,8 +162,66 @@
 
       </div>
 
-      <div id="Contact" class="content">Contactez-nous.
+      <!-- Contact -->
+      <div id="Contact" class="content">
+            <h2 style="text-align: center;">Nos Informations de contacts :</h2>
+            <div class="flex-container">
+                  <div class="flex-item-gauche"
+                        style="border-radius: 5px; background-color: rgb(245, 237, 237); padding: 20px; text-align: left;">
+                        <form id="formContact" action="#" method="post" enctype="text/plain" onsubmit="sendMail(event)">
+                              <label for="prenom"><span>Prénom</span></label>
+                              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+                                    required="required">
 
+                              <label for="nom">Nom</label>
+                              <input type="text" id="nom" name="nom" placeholder="Votre nom.." required="required">
+
+                              <label for="mail">Mail</label>
+                              <input type="email" id="mail" name="mail" placeholder="Votre mail.." required="required">
+
+                              <label for="phone">Numéro de téléphone</label>
+                              <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone.."
+                                    required="required">
+
+                              <label for="adresse">Adresse</label>
+                              <input type="text" id="adresse" name="adresse" placeholder="Votre adresse.."
+                                    required="required">
+
+                              <label for="why">Raisons du contact</label>
+                              <select id="why" name="why">
+                                    <option value="devis">Demande de devis</option>
+                                    <option value="renseignement">Renseignements</option>
+                                    <option value="autre">Autre</option>
+                              </select>
+
+                              <label for="subject">Message</label>
+                              <textarea id="subject" name="subject" placeholder="Votre message.." style="height:100px"
+                                    required="required"></textarea>
+
+                              <input type="submit" value="ENVOYER">
+                        </form>
+                  </div>
+                  <div class="flex-item-droite" style="font-size: 20px;">
+                        <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d843.8185966525715!2d-1.1566054924570364!3d44.65311837978226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd549ee0cc2a5e53%3A0x7e4689187247224f!2s58%20Av.%20de%20la%20Lib%C3%A9ration%2C%2033120%20Arcachon!5e0!3m2!1sfr!2sfr!4v1741013281771!5m2!1sfr!2sfr"
+                              width="450" height="350" style="border:0; border-radius: 10px; overflow: hidden;"
+                              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p>Bassin d'Arcachon, Gironde, 33 Aquitaine</p><br>
+                        <p>58 Avenue de la libération 33120 Arcachon</p><br>
+                        <p style="color: #f05f06; font-weight: bold;">📧 lefebvre.laveau.sylvain@gmail.com</p><br>
+                        <p>📞 05 56 22 51 95</p><br>
+                        <div class="social-buttons">
+                              <a href="https://www.instagram.com/lefebvrelaveau" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram"></i> Instagram
+                              </a>
+                              <a href="https://www.facebook.com/profile.php?id=100009056489117" target="_blank"
+                                    class="social-icon">
+                                    <i class="fab fa-facebook"></i> Facebook
+                              </a>
+                        </div>
+                  </div>
+            </div>
       </div>
 
 

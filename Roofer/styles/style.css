@@ -270,3 +270,52 @@ a {
 .social-icon i {
   font-size: 35px;
 }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+#Contact>div>div.flex-item-droite>div>a:nth-child(1):hover {
+  background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Contact>div>div.flex-item-droite>div>a:nth-child(2):hover {
+  color: #0866ff;
+}
+
+/* formulaire de contact */
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+input[type=submit] {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #f05f06;
+}
+
+#formContact>label {
+  color: black;
+  font-size: 20px;
+}
