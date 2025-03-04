@@ -44,9 +44,8 @@ function verifierHoraire() {
 
 verifierHoraire(); // Exécuter au chargement de la page
 
-// POUR LE FORMULAIRE DE CONTACT
 function sendMail(event) {
-    event.preventDefault();
+    event.preventDefault(); // Empêche le rechargement de la page
 
     var prenom = document.getElementById("prenom").value;
     var nom = document.getElementById("nom").value;
@@ -56,16 +55,18 @@ function sendMail(event) {
     var why = document.getElementById("why").value;
     var subject = document.getElementById("subject").value;
 
-    var ebody = "Prénom: " + prenom + "\r\n"
-        + "Nom: " + nom + "\r\n"
-        + "Email: " + mail + "\r\n"
-        + "Téléphone: " + phone + "\r\n"
-        + "Adresse: " + adresse + "\r\n"
+    var ebody = "Prénom: " + prenom + "\n"
+        + "Nom: " + nom + "\n"
+        + "Email: " + mail + "\n"
+        + "Téléphone: " + phone + "\n"
+        + "Adresse: " + adresse + "\n"
         + "Message: " + subject;
 
-    document.getElementById('formContact').action = "mailto:lefebvre.laveau.sylvain@gmail.com?subject="
-        + encodeURIComponent(why)
+    var mailtoLink = "mailto:lefebvre.laveau.sylvain@gmail.com"
+        + "?subject=" + encodeURIComponent(why)
         + "&body=" + encodeURIComponent(ebody);
 
-    window.location.href = mailtoLink;
+    console.log("Mailto Link:", mailtoLink); // Vérification dans la console
+
+    window.location.href = mailtoLink; // Ouvre le client mail
 }
