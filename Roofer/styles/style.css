@@ -5,6 +5,7 @@ body {
   background: linear-gradient(to right, #2A3D66, #121212);
 }
 
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* MENU DU COTE */
 .menu::-webkit-scrollbar {
   display: none;
@@ -110,6 +111,7 @@ a {
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* style pour la section horaires */
 .flex-container-2 {
   display: flex;
   padding: 20px;
@@ -272,6 +274,7 @@ a {
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Style pour la section contact */
 #Contact>div>div.flex-item-droite>div>a:nth-child(1):hover {
   background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
   background-clip: text;
@@ -319,3 +322,5 @@ input[type=submit]:hover {
   color: black;
   font-size: 20px;
 }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */

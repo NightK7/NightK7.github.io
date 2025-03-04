@@ -70,3 +70,13 @@ function sendMail(event) {
 
     window.location.href = mailtoLink; // Ouvre le client mail
 }
+
+//Copier l'email
+function copyEmail() {
+    var email = "lefebvre.laveau.sylvain@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+        alert("Email copié : " + email);
+    }).catch(err => {
+        console.error("Erreur lors de la copie : ", err);
+    });
+}
