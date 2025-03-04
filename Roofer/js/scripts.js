@@ -45,8 +45,8 @@ function verifierHoraire() {
 verifierHoraire(); // Exécuter au chargement de la page
 
 // POUR LE FORMULAIRE DE CONTACT
-function sendMail() {
-    e.preventDefault();
+function sendMail(event) {
+    event.preventDefault();
 
     var prenom = document.getElementById("prenom").value;
     var nom = document.getElementById("nom").value;
@@ -67,6 +67,5 @@ function sendMail() {
         + encodeURIComponent(why)
         + "&body=" + encodeURIComponent(ebody);
 
-    alert("Lien mailto généré : " + mailtoLink);
-    // window.location.href = mailtoLink;
+    window.location.href = mailtoLink;
 }
