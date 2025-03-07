@@ -6,6 +6,34 @@ body {
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Boutons suivant/precedent */
+
+.navigation-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 53%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.navigation-buttons button {
+  background-color: #f05f06;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navigation-buttons button:hover {
+  background-color: #d04e04;
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* MENU DU COTE */
 .menu::-webkit-scrollbar {
   display: none;
@@ -333,7 +361,8 @@ input[type=submit]:hover {
   z-index: 1;
 }
 
-.mySlides img {
+.mySlides img,
+.mySlides2 img {
   height: 300px;
   object-fit: cover;
   object-position: center 75%;
@@ -352,7 +381,9 @@ input[type=submit]:hover {
 
 /* Next & previous buttons */
 .prev,
-.next {
+.prev2,
+.next,
+.next2 {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -368,14 +399,17 @@ input[type=submit]:hover {
 }
 
 /* Position the "next button" to the right */
-.next {
+.next,
+.next2 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
-.next:hover {
+.next:hover,
+.prev2:hover,
+.next2:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -394,7 +428,8 @@ input[type=submit]:hover {
 }
 
 /* Number text (1/3 etc) */
-.numbertext {
+.numbertext,
+.numbertext2 {
   color: white;
   font-size: 12px;
   padding: 8px 12px;
@@ -403,7 +438,8 @@ input[type=submit]:hover {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot,
+.dot2 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -418,7 +454,9 @@ input[type=submit]:hover {
 }
 
 .dot,
-.dot:hover {
+.dot:hover,
+.dot2,
+.dot2:hover {
   background-color: #f05f06;
 }
 

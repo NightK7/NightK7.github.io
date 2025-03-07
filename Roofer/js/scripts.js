@@ -1,3 +1,4 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
 // POUR L'AFFICHAGE DU CONTENU AN FONSTION DU MENU SUR LE COTER
 document.addEventListener("DOMContentLoaded", function () {
     // Sélectionne tous les liens du menu
@@ -24,7 +25,55 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+///////////////////////////////////////////////////////////////////////////////////////////////
+//BOUTONS PRECEDENT ET SUIVANT
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = Array.from(document.querySelectorAll(".menu-content a"));
+    const contents = Array.from(document.querySelectorAll(".content"));
+    let currentIndex = 0;
 
+    function showContent(index) {
+        // Vérifier si l'index est valide
+        if (index < 0 || index >= contents.length) return;
+
+        // Cacher tous les contenus
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // Montrer le contenu correspondant
+        contents[index].classList.add("active");
+
+        // Mettre à jour l'index actuel
+        currentIndex = index;
+    }
+
+    function nextContent() {
+        if (currentIndex < contents.length - 1) {
+            showContent(currentIndex + 1);
+        }
+    }
+
+    function prevContent() {
+        if (currentIndex > 0) {
+            showContent(currentIndex - 1);
+        }
+    }
+
+    // Ajouter les événements sur les boutons
+    document.getElementById("nextButton").addEventListener("click", nextContent);
+    document.getElementById("prevButton").addEventListener("click", prevContent);
+
+    // Activer la navigation depuis le menu
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            showContent(index);
+        });
+    });
+
+    // Initialiser avec la première section active
+    showContent(0);
+});
+///////////////////////////////////////////////////////////////////////////////////////////////
 // TABLEAU DS HORAIRES D'OUVERTURE
 function verifierHoraire() {
     const maintenant = new Date();
@@ -80,9 +129,11 @@ function copyEmail() {
         console.error("Erreur lors de la copie : ", err);
     });
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////////
 //Slide show
 let slideIndex = 1;
+
+//slide1 avant-toit
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -97,6 +148,32 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+//slide2 avant-toit
+showSlides2(slideIndex);
+
+function plusSlides2(n) {
+    showSlides2(slideIndex += n);
+}
+
+function currentSlide2(n) {
+    showSlides2(slideIndex = n);
+}
+function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    let dots = document.getElementsByClassName("dot2");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
