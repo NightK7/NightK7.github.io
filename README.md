@@ -7,7 +7,7 @@ Juste un fansite sur l'univers de la série The 100.
 Une idée de pack et de pass qui pourrait être bien pour le prix du foot français.
 
 ## 🏠 [Projet 3 - Roofer](https://nightk7.github.io/Roofer)
-Une idée de site pour un charpentier couvreur.
+Site pour un couvreur sur Arcachon.
 
 ---
 
