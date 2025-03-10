@@ -2,7 +2,8 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(to right, #2A3D66, #121212);
+  /* background: linear-gradient(to right, #2A3D66, #121212); */
+  background: linear-gradient(to right, #2A7FBA, #121246);
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -60,7 +61,7 @@ ul {
   background: #ffffff12;
   -ms-overflow-style: none;
   backdrop-filter: blur(5px);
-  box-shadow: 8px 0px 9px 0px #00000014;
+  box-shadow: 8px 0px 9px 0px #00000025;
   z-index: 10;
 }
 
@@ -122,7 +123,7 @@ a {
 }
 
 #Acceuil {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), rgba(0, 0, 0, -0.5)),
     url('../images/home.webp');
   /* background-image: url('../images/home.webp'); */
   background-size: cover;
@@ -369,6 +370,7 @@ input[type=submit]:hover {
   object-fit: cover;
   object-position: center 75%;
   border-radius: 10px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
 }
 
 #Isolation>div>div.flex-item-droite>p,
