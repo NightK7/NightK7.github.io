@@ -35,9 +35,16 @@ body {
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
-/* MENU DU COTE */
+/* MENU DU COTE (si jamais couleur brique #A63E2F) */
 .menu::-webkit-scrollbar {
   display: none;
+}
+
+.menu-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, yellow, transparent);
+  margin: 15px 0;
 }
 
 h1,
@@ -77,8 +84,9 @@ ul {
   list-style: none;
   border-radius: 0px 50px 50px 0;
   transition: .3s;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 20px;
+  margin-top: 15px;
 }
 
 .menu-content li:hover {
@@ -506,5 +514,47 @@ input[type=submit]:hover {
   .next,
   .text {
     font-size: 11px
+  }
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Section grille photos */
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%;
+  flex: 20%;
+  padding: 0 4px;
+  max-width: calc(25% - 4px);
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 20%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 50%;
+    max-width: 100%;
   }
 }
