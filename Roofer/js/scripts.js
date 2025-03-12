@@ -2,24 +2,60 @@
 // POUR L'AFFICHAGE DU CONTENU AN FONSTION DU MENU SUR LE COTER
 document.addEventListener("DOMContentLoaded", function () {
     let menuItems = document.querySelectorAll(".menu-content li a");
+    let prevButton = document.getElementById("prevButton");
+    let nextButton = document.getElementById("nextButton");
+    let sections = document.querySelectorAll(".content");
+    let currentIndex = 0; // Index de la section actuellement visible
 
+    // Fonction pour afficher la section active en utilisant fade-in
+    function showSection(index) {
+        let currentSection = document.querySelector(".content.active");
+        if (currentSection) {
+            currentSection.classList.remove("active");
+            currentSection.classList.remove("fade-in"); // Retirer fade-in de la section actuelle
+        }
+
+        // Afficher la nouvelle section avec fade-in
+        let targetSection = sections[index];
+        if (targetSection) {
+            targetSection.classList.add("fade-in");
+            targetSection.classList.add("active");
+
+            // Enlever fade-in après l'animation
+            targetSection.addEventListener("animationend", function () {
+                targetSection.classList.remove("fade-in");
+            });
+        }
+    }
+
+    // Navigation avec les éléments du menu
     menuItems.forEach(item => {
         item.addEventListener("click", function (event) {
             event.preventDefault();
-
             let sectionId = this.getAttribute("data-target");
 
-            document.querySelectorAll(".content").forEach(section => {
-                section.classList.remove("active");
-            });
-
-            let targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.add("active");
-            }
+            // Trouver l'index de la section à afficher
+            currentIndex = Array.from(sections).findIndex(section => section.id === sectionId);
+            showSection(currentIndex);
         });
     });
+
+    // Navigation avec le bouton précédent
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex === 0) ? sections.length - 1 : currentIndex - 1;
+        showSection(currentIndex);
+    });
+
+    // Navigation avec le bouton suivant
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex === sections.length - 1) ? 0 : currentIndex + 1;
+        showSection(currentIndex);
+    });
+
+    // Affichage initial de la première section (si nécessaire)
+    showSection(currentIndex);
 });
+
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //BOUTONS PRECEDENT ET SUIVANT
 document.addEventListener("DOMContentLoaded", function () {

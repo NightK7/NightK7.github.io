@@ -123,13 +123,31 @@ a {
   border-radius: 10px;
   color: white;
   font-size: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .content.active {
   display: block;
   /* Afficher uniquement l'élément actif */
+  opacity: 1;
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 #Acceuil {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), rgba(0, 0, 0, -0.5)),
     url('../images/home.webp');
@@ -539,6 +557,14 @@ input[type=submit]:hover {
   margin-top: 8px;
   vertical-align: middle;
   object-fit: cover;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.699);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
