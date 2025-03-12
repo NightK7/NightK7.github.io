@@ -52,6 +52,13 @@ h2 {
   color: #f05f06;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, yellow, transparent);
+  margin: 15px 0;
+}
+
 ul {
   padding: 0;
 }
@@ -397,6 +404,13 @@ input[type=submit]:hover {
   object-position: center 75%;
   border-radius: 10px;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
+}
+
+.mySlides img:hover,
+.mySlides2 img:hover,
+.mySlides3 img:hover,
+.mySlides4 img:hover {
+  cursor: pointer;
 }
 
 #Isolation>div>div.flex-item-droite>p,
