@@ -57,6 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+//BOUTON APPELEZ-NOUS
+document.addEventListener("DOMContentLoaded", function () {
+    let contactButton = document.getElementById("btncontact");
+
+    contactButton.addEventListener("click", function (event) {
+        if (!navigator.userAgent.match(/Mobi/)) { // Vérifie si l'utilisateur est sur PC
+            event.preventDefault(); // Empêche l'ouverture du lien tel:
+            let phoneNumber = "+33556225195"; // Remplacez par votre numéro
+
+            navigator.clipboard.writeText(phoneNumber).then(function () {
+                alert("📋 Numéro copié : " + phoneNumber);
+            }, function (err) {
+                console.error("Erreur de copie : ", err);
+            });
+        }
+    });
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 //BOUTONS PRECEDENT ET SUIVANT
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = Array.from(document.querySelectorAll(".menu-content a"));

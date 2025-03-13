@@ -7,6 +7,29 @@ body {
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/*Boutons Appelez-nous */
+.cta-floating {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background-color: #f05f06;
+  color: white;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.cta-floating:hover {
+  transform: scale(1.1);
+  background-color: #ffae00;
+  box-shadow: black 1px 1px 5px;
+}
+
 /* Boutons suivant/precedent */
 
 .navigation-buttons {
@@ -30,7 +53,8 @@ body {
 }
 
 .navigation-buttons button:hover {
-  background-color: #d04e04;
+  background-color: #ffae00;
+  box-shadow: black 1px 1px 5px;
 }
 
 
@@ -158,11 +182,12 @@ a {
 #Acceuil {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), rgba(0, 0, 0, -0.5)),
     url('../images/home.webp');
-  /* background-image: url('../images/home.webp'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  color: white;
+  height: 100vh;
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
