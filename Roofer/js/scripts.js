@@ -64,15 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
     contactButton.addEventListener("click", function (event) {
         if (!navigator.userAgent.match(/Mobi/)) { // Vérifie si l'utilisateur est sur PC
             event.preventDefault(); // Empêche l'ouverture du lien tel:
-            let phoneNumber = "+33556225195"; // Remplacez par votre numéro
+            let phoneNumber = "+33556225195";
 
             navigator.clipboard.writeText(phoneNumber).then(function () {
-                alert("📋 Numéro copié : " + phoneNumber);
+                // alert("📋 Numéro copié : " + phoneNumber);
+                showCopyNotification("📋 Numéro copié : " + phoneNumber);
             }, function (err) {
                 console.error("Erreur de copie : ", err);
             });
         }
     });
+    function showCopyNotification(message) {
+        let notification = document.getElementById("copyNotification");
+        notification.textContent = message;
+        notification.style.display = "block";
+
+        setTimeout(function () {
+            notification.style.display = "none";
+        }, 3000); // Disparaît après 3 secondes
+    }
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////

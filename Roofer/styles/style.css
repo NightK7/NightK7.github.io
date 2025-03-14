@@ -30,6 +30,24 @@ body {
   box-shadow: black 1px 1px 5px;
 }
 
+/* Div notif c'est copié */
+#copyNotification {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(76, 175, 80, 0.95);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  white-space: nowrap;
+}
+
 /* Boutons suivant/precedent */
 
 .navigation-buttons {
@@ -187,7 +205,6 @@ a {
   background-attachment: fixed;
   overflow: hidden;
   color: white;
-  height: 100vh;
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
