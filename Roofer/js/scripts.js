@@ -174,10 +174,20 @@ function sendMail(event) {
 function copyEmail() {
     var email = "lefebvre.laveau.sylvain@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
-        alert("Email copié : " + email);
+        // alert("Email copié 📧: " + email);
+        showCopyNotification2("📧 Email copié : " + email);
     }).catch(err => {
         console.error("Erreur lors de la copie : ", err);
     });
+}
+function showCopyNotification2(message) {
+    let notification = document.getElementById("copyNotification2");
+    notification.textContent = message;
+    notification.style.display = "block";
+
+    setTimeout(function () {
+        notification.style.display = "none";
+    }, 3000); // Disparaît après 3 secondes
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //Slide show

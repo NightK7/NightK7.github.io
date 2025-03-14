@@ -31,7 +31,8 @@ body {
 }
 
 /* Div notif c'est copié */
-#copyNotification {
+#copyNotification,
+#copyNotification2 {
   display: none;
   position: fixed;
   top: 20px;
