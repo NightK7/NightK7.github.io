@@ -633,7 +633,6 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 
-/* The actual content */
 .time_content_left {
   position: relative;
   display: flex;
@@ -656,6 +655,11 @@ input[type=submit]:hover {
   margin: 0 auto;
   background: white;
   border-radius: 10px;
+}
+
+.time_content_left:hover,
+.time_content_right:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
 }
 
 .image-text {
@@ -770,7 +774,7 @@ input[type=submit]:hover {
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+  left: -19px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
