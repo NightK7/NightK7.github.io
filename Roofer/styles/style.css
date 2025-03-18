@@ -855,3 +855,48 @@ input[type=submit]:hover {
     font-size: 14px;
   }
 }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Section zinguerie */
+#Zinguerie,
+#Zinguerie * {
+  box-sizing: border-box;
+}
+
+#Zinguerie>h3 {
+  text-shadow: black 1px 1px 5px;
+}
+
+.column_zinguerie {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row_zinguerie::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.row_zinguerie img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column_zinguerie {
+    width: 100%;
+  }
+}
