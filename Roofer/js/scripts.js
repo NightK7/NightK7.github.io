@@ -1,4 +1,17 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
+// POUR LE MESSAGE DE ROTATION
+function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        document.getElementById("rotate-alert").style.display = "block";
+    } else {
+        document.getElementById("rotate-alert").style.display = "none";
+    }
+}
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("load", checkOrientation);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 // POUR L'AFFICHAGE DU CONTENU AN FONSTION DU MENU SUR LE COTER
 document.addEventListener("DOMContentLoaded", function () {
     let menuItems = document.querySelectorAll(".menu-content li a");
