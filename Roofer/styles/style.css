@@ -362,6 +362,15 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  .flex-item-left img,
+  .flex-item-right img {
+    max-width: 150px;
+    width: 100%;
+  }
+}
+
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* Style pour les icônes de réseaux sociaux */
 .social-buttons {
@@ -369,6 +378,19 @@ a {
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .social-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .social-buttons a {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .social-icon {
@@ -407,6 +429,15 @@ a {
 
 #Contact>div>div.flex-item-droite>div>a:nth-child(2):hover {
   color: #0866ff;
+}
+
+#email {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  padding: 10px 0;
 }
 
 /* formulaire de contact */
@@ -911,14 +942,13 @@ input[type=submit]:hover {
   display: table;
 }
 
-
 .row_zinguerie img {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.5s;
 }
 
-img:hover {
+#Zinguerie img:hover {
   cursor: pointer;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
   transform: scale(1.05);
@@ -931,3 +961,6 @@ img:hover {
     width: 100%;
   }
 }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Section entretien */
