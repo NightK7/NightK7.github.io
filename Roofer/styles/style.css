@@ -964,3 +964,110 @@ input[type=submit]:hover {
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* Section entretien */
+.comparison-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.image-comparison {
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-comparison img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-comparison .images-container {
+  position: relative;
+  display: flex;
+}
+
+.image-comparison .images-container .before-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0 50% 0 0);
+}
+
+.image-comparison .slider {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-comparison .slider-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-comparison .slider-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  transform: translate(-50%, -50%) rotateZ(90deg);
+}
+
+#Entretien>p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.liste-nettoyage {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.detail {
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.logo-entretien {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#Entretien>div:nth-child(6)>img {
+  width: 65px;
+  gap: 10px;
+}
+
+.text-container {
+  max-width: 500px;
+  flex: 1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
