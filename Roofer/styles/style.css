@@ -2,7 +2,6 @@
 
 body {
   min-height: 100vh;
-  /* background: linear-gradient(to right, #2A3D66, #121212); */
   background: linear-gradient(to right, #2A7FBA, #121246);
 }
 
@@ -94,7 +93,7 @@ body {
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
-/* MENU DU COTE (si jamais couleur brique #A63E2F) */
+/* MENU DU COTE */
 .menu::-webkit-scrollbar {
   display: none;
 }
@@ -288,9 +287,11 @@ a {
   padding: 0;
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 .horaire-list li {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -327,6 +328,19 @@ a {
 .horaire-list .horaire {
   color: black;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .horaire-list li {
+    font-size: 14px;
+    padding: 8px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .horaire-list li strong {
+    font-size: 13px;
+  }
 }
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -388,7 +402,6 @@ a {
   }
 
   .social-buttons a {
-    width: 100%;
     text-align: center;
   }
 }

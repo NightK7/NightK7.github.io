@@ -18,54 +18,46 @@ document.addEventListener("DOMContentLoaded", function () {
     let prevButton = document.getElementById("prevButton");
     let nextButton = document.getElementById("nextButton");
     let sections = document.querySelectorAll(".content");
-    let currentIndex = 0; // Index de la section actuellement visible
+    let currentIndex = 0;
 
-    // Fonction pour afficher la section active en utilisant fade-in
     function showSection(index) {
         let currentSection = document.querySelector(".content.active");
         if (currentSection) {
             currentSection.classList.remove("active");
-            currentSection.classList.remove("fade-in"); // Retirer fade-in de la section actuelle
+            currentSection.classList.remove("fade-in");
         }
 
-        // Afficher la nouvelle section avec fade-in
         let targetSection = sections[index];
         if (targetSection) {
             targetSection.classList.add("fade-in");
             targetSection.classList.add("active");
 
-            // Enlever fade-in après l'animation
             targetSection.addEventListener("animationend", function () {
                 targetSection.classList.remove("fade-in");
             });
         }
     }
 
-    // Navigation avec les éléments du menu
     menuItems.forEach(item => {
         item.addEventListener("click", function (event) {
             event.preventDefault();
             let sectionId = this.getAttribute("data-target");
 
-            // Trouver l'index de la section à afficher
             currentIndex = Array.from(sections).findIndex(section => section.id === sectionId);
             showSection(currentIndex);
         });
     });
 
-    // Navigation avec le bouton précédent
     prevButton.addEventListener("click", function () {
         currentIndex = (currentIndex === 0) ? sections.length - 1 : currentIndex - 1;
         showSection(currentIndex);
     });
 
-    // Navigation avec le bouton suivant
     nextButton.addEventListener("click", function () {
         currentIndex = (currentIndex === sections.length - 1) ? 0 : currentIndex + 1;
         showSection(currentIndex);
     });
 
-    // Affichage initial de la première section (si nécessaire)
     showSection(currentIndex);
 });
 
