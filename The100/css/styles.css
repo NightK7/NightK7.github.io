@@ -21,6 +21,21 @@ body {
   padding: 10rem 0;
 }
 
+/* Orientation Paysage */
+#rotate-alert {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 9999;
+}
+
 /* **************************OVERRIDE BOOTSTRAP****************** */
 hr {
   margin: 1rem 0;

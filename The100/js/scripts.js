@@ -113,3 +113,15 @@ function imageZoom(element, id, id2) {
     document.getElementById(id).src = element.src;
     document.getElementById(id2).style.display = "block";
 }
+
+// POUR LE MESSAGE DE ROTATION
+function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        document.getElementById("rotate-alert").style.display = "block";
+    } else {
+        document.getElementById("rotate-alert").style.display = "none";
+    }
+}
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("load", checkOrientation);

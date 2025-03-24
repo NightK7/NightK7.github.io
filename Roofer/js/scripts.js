@@ -1,4 +1,25 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
+// Fonction pour changer le titre de la page en fonction de la section active
+function changeTitle(target) {
+    const sections = document.querySelectorAll('.content');
+
+    sections.forEach(section => section.classList.remove('active'));
+
+    const activeSection = document.getElementById(target);
+    activeSection.classList.add('active');
+
+    document.title = `EURL LLS Arcachon | ${target}`;
+}
+
+document.querySelectorAll('.menu-content a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = e.target.closest('a').getAttribute('data-target');
+        changeTitle(target);
+    });
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 // POUR LE MESSAGE DE ROTATION
 function checkOrientation() {
     if (window.innerHeight > window.innerWidth) {
@@ -101,18 +122,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < 0 || index >= contents.length) return;
         contents.forEach((content) => content.classList.remove("active"));
         contents[index].classList.add("active");
+
+        const target = contents[index].id;
+        changeTitle(target);
+
         currentIndex = index;
     }
 
     function nextContent() {
         if (currentIndex < contents.length - 1) {
             showContent(currentIndex + 1);
+        } else {
+            showContent(0);
         }
     }
 
     function prevContent() {
         if (currentIndex > 0) {
             showContent(currentIndex - 1);
+        } else {
+            showContent(contents.length - 1);
         }
     }
 
@@ -128,6 +157,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showContent(0);
 });
+
+// Fonction pour changer le titre de l'onglet dynamiquement
+function changeTitle(target) {
+    document.title = `EURL LLS Arcachon | ${target}`;
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // TABLEAU DS HORAIRES D'OUVERTURE
 function verifierHoraire() {
