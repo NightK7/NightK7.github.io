@@ -87,13 +87,13 @@ body::before {
     box-shadow: 0px 0px 0.5px 0.5px white;
     width: 300px;
     text-align: center;
-    color: black;
+    color: #121010;
 }
 
 /* pour les titres */
 h1 {
     font-family: 'Ligue1Font';
-    color: black;
+    color: #121010;
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
@@ -105,27 +105,27 @@ p {
 
 .two {
     background: #ff7fde;
-    color: black;
+    color: #121010;
 }
 
 .three {
     background: #FFA500;
-    color: black;
+    color: #121010;
 }
 
 body>div:nth-child(3)>div:nth-child(2) {
     background: #50fa7b;
-    color: black;
+    color: #121010;
 }
 
 body>div:nth-child(3)>div:nth-child(4) {
-    background: rgb(0, 0, 0);
+    background: #121010;
     color: white;
 }
 
 body>div:nth-child(3)>div:nth-child(4)>div.subscribe {
     background: white;
-    color: black;
+    color: #121010;
 }
 
 .price {
@@ -142,12 +142,12 @@ body>div:nth-child(3)>div:nth-child(4)>div.subscribe {
 }
 
 #blackseparator {
-    background: black;
+    background: #121010;
 }
 
 /* bouton s'abonner*/
 .subscribe {
-    background: black;
+    background: #121010;
     padding: 10px;
     text-align: center;
     font-weight: bold;
@@ -225,5 +225,5 @@ body>div:nth-child(3)>div:nth-child(4)>div.subscribe {
     border-radius: 5px;
     box-shadow: 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.69);
     font-size: 14px;
-    color: black;
+    color: #121010;
 }
