@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 targetSection.classList.remove("fade-in");
             });
         }
+        // Remonter en haut de la page après le changement de section
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     menuItems.forEach(item => {
@@ -127,6 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
         changeTitle(target);
 
         currentIndex = index;
+
+        // Remonter en haut de la page après le changement de contenu
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     function nextContent() {

@@ -959,6 +959,8 @@ input[type=submit]:hover {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.5s;
+  height: 200px;
+  object-fit: cover;
 }
 
 #Zinguerie img:hover {
@@ -971,6 +973,52 @@ input[type=submit]:hover {
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 500px) {
   .column_zinguerie {
+    width: 100%;
+  }
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Section couverture */
+#Couverture,
+#Couverture * {
+  box-sizing: border-box;
+}
+
+#Couverture>h3 {
+  text-shadow: black 1px 1px 5px;
+}
+
+.column_couverture {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row_couverture::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row_couverture img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+  height: 200px;
+  object-fit: cover;
+}
+
+#Couverture img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.493);
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column_couverture {
     width: 100%;
   }
 }
