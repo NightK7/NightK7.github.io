@@ -284,7 +284,7 @@ a {
 
 .horaire-list {
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
@@ -1131,4 +1131,11 @@ input[type=submit]:hover {
   .text-container {
     text-align: center;
   }
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Section Realisations */
+#Realisation,
+#Realisation * {
+  box-sizing: border-box;
 }
