@@ -129,21 +129,15 @@ footer {
   margin: 40px auto;
 }
 
-#copyrightEtIcons {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 0 10%;
-}
-
 #copyright {
-  width: 50%;
-  text-align: left;
+  width: auto;
+  text-align: center;
   color: white;
 }
 
 #icons {
-  width: 50%;
-  text-align: right;
+  width: auto;
+  text-align: center;
 }
 
 #icons a {
