@@ -81,7 +81,6 @@ a {
 
 a:hover {
   color: var(--bs-primary);
-  text-decoration: underline;
 }
 
 .sticky-top {
