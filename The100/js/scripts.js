@@ -116,10 +116,16 @@ function imageZoom(element, id, id2) {
 
 // POUR LE MESSAGE DE ROTATION
 function checkOrientation() {
-    if (window.innerHeight > window.innerWidth) {
-        document.getElementById("rotate-alert").style.display = "block";
+    const rotateAlert = document.getElementById("rotate-alert");
+
+    if (rotateAlert) {
+        if (window.innerHeight > window.innerWidth) {
+            rotateAlert.style.display = "block";
+        } else {
+            rotateAlert.style.display = "none";
+        }
     } else {
-        document.getElementById("rotate-alert").style.display = "none";
+        console.warn("L'élément 'rotate-alert' est introuvable. L'erreur a été évitée.");
     }
 }
 
